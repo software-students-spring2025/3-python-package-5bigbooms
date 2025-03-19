@@ -13,7 +13,7 @@ def hall_of_fame(n: int):
     if n <= 0:
         return []
     # ensure no error messages
-    return random.sample(hall_of_fame_list, min(n, len(hall_of_fame_list)))
+    return random.sample(brainrot_list, min(n, len(brainrot_list)))
 
 
 # Random capitalization function
