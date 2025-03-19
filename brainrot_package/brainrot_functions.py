@@ -23,6 +23,12 @@ def random_capitalization(phrase: str):
     for i in range(len(phrase)):
             result += phrase[i].upper if i % 2 == 1 else phrase[i]
     return result 
-        
+
+# rotify function
+# arguments: string phrase
+# return: string with "ahh" concatenated
+def rotify(input_string):
+    return input_string + "ahh"
+
 
 
