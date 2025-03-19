@@ -52,6 +52,8 @@ brainrot_list = {
     "negative": ["aura"],
     "Only in": ["Ohio"],
     "Wait": ["They don't love you like I love you"],    
+     "Haliey Welch": ["hawk tuah, spit on that thang"],
+     "The Costco Guys": ["We're so sorry to hear about your brother that passed away he gets five big booms... BOOM. BOOM. BOOM. BOOM. BOOOOOOOOM!!", "we bring the BOOM"]
 }
 
 # brainrot function
@@ -64,6 +66,11 @@ def brainrot(n: int):
     selected_keys = random.sample(list(brainrot_list.keys()), min(n, len(brainrot_list)))
     return {key: brainrot_list[key] for key in selected_keys}
 
+def get_brain_rot_of(name):
+    if name in brainrot_list:
+          return name + ": " + random.choice(brainrot_list[name])
+    else:
+         return name + " is unfortunately not a brainrot contributor"
 
 # Random capitalization function
 # arguments: string phrase
@@ -97,6 +104,11 @@ def main():
     sample_rot = "skibidi"
     print(f"Original: {sample_rot}")
     print(f"Modified: {rotify(sample_rot)}")
+    
+    print("\nTesting get_brain_rot_of function:")
+    test_names = ["FettyWap", "The uninvited", "Jaden", "Nonexistent Name"]
+    for name in test_names:
+        print(get_brain_rot_of(name))
 
 if __name__ == "__main__":
     main()
