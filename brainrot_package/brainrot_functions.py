@@ -60,13 +60,22 @@ brainrot_list = {
 # arguments: integer number
 # return: n random brainrots from list
 def brainrot(n: int):
+    # check if n is an integer
+    if not isinstance(n, int):
+        raise TypeError("n must be an integer")
+    # check if n is positive
     if n <= 0:
         return {}
     
     selected_keys = random.sample(list(brainrot_list.keys()), min(n, len(brainrot_list)))
     return {key: brainrot_list[key] for key in selected_keys}
 
+# brainrot of specific person function
+# arguments: name
+# return: a brainrot attributed to input name
 def get_brain_rot_of(name):
+    if not isinstance(name, str):
+         name = str(name)
     if name in brainrot_list:
           return name + ": " + random.choice(brainrot_list[name])
     else:
@@ -84,8 +93,21 @@ def random_capitalization(phrase: str):
 # rotify function
 # arguments: string phrase
 # return: string with "ahh" concatenated
-def rotify(input_string):
+def rotify(input_string: str):
     return input_string + " ahh"
+
+# backwards text function
+# arguments: text
+# return: string in opposite direction
+def backwards_text(text):
+    result = ""
+    if not isinstance(text, str):
+        text = str(text)
+    for i in range(len(text) - 1, -1, -1):
+        result += text[i]
+    return result
+     
+     
 
 # Main function to test the implemented functions
 # DELETE LATER
