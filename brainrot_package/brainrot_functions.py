@@ -55,7 +55,7 @@ brainrot_list = {
 
 # brainrot function
 # arguments: integer number
-# return: random names from list
+# return: n random brainrots from list
 def brainrot(n: int):
     if n <= 0:
         return {}
@@ -71,14 +71,35 @@ def brainrot(n: int):
 def random_capitalization(phrase: str):
     result = ""
     for i in range(len(phrase)):
-            result += phrase[i].upper if i % 2 == 1 else phrase[i]
+            result += phrase[i].upper() if i % 2 == 1 else phrase[i]
     return result 
 
 # rotify function
 # arguments: string phrase
 # return: string with "ahh" concatenated
 def rotify(input_string):
-    return input_string + "ahh"
+    return input_string + " ahh"
+
+# Main function to test the implemented functions
+# DELETE LATER
+def main():
+    print("Testing brainrot function (3 random entries):")
+    brainrot_output = brainrot(3)
+    for key, value in brainrot_output.items():
+        print(f"{key}: {value}")
+
+    print("\nTesting random_capitalization function:")
+    sample_phrase = "test test testing capitalization"
+    print(f"Original: {sample_phrase}")
+    print(f"Modified: {random_capitalization(sample_phrase)}")
+
+    print("\nTesting rotify function:")
+    sample_rot = "skibidi"
+    print(f"Original: {sample_rot}")
+    print(f"Modified: {rotify(sample_rot)}")
+
+if __name__ == "__main__":
+    main()
 
 
 
