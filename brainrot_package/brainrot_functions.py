@@ -50,7 +50,8 @@ brainrot_list = {
     "Mama": ["Mama a girl behind you"],
     "10": ["level 10 gyat"], 
     "negative": ["aura"],
-    "Only in": ["Ohio"],    
+    "Only in": ["Ohio"],
+    "Wait": ["They don't love you like I love you"],    
 }
 
 # brainrot function
@@ -62,7 +63,6 @@ def brainrot(n: int):
     
     selected_keys = random.sample(list(brainrot_list.keys()), min(n, len(brainrot_list)))
     return {key: brainrot_list[key] for key in selected_keys}
-
 
 
 # Random capitalization function
