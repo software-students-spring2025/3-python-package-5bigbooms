@@ -3,7 +3,7 @@ import random
 #predefined list 
 brainrot_list = {
      "Haliey Welch": ["hawk tuah, spit on that thang"],
-     "The Costco Guys": ["We're so sorry to hear about your brother that passed away he gets five big booms... BOOM. BOOM. BOOM. BOOM. BOOOOOOOOM!!", ""]
+     "The Costco Guys": ["We're so sorry to hear about your brother that passed away he gets five big booms... BOOM. BOOM. BOOM. BOOM. BOOOOOOOOM!!", "we bring the BOOM"]
 }
 
 # Hall of fame function
@@ -15,6 +15,11 @@ def hall_of_fame(n: int):
     # ensure no error messages
     return random.sample(brainrot_list, min(n, len(brainrot_list)))
 
+def get_brain_rot_of(name):
+    if name in brainrot_list:
+          return name + ": " + random.choice(brainrot_list[name])
+    else:
+         return name + " is not a brainrot contributor"
 
 # Random capitalization function
 # arguments: string phrase
