@@ -2,7 +2,7 @@ import random
 
 #predefined list 
 hall_of_fame_list = [
-    #Tony's list
+
 ]
 
 # Hall of fame function
