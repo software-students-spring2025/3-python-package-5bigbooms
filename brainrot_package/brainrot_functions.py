@@ -44,7 +44,7 @@ brainrot_list = {
     "skibidi": ["toilet rizz"], 
     "what the": ["sigma"], 
     "chat": ["we're cooked"], 
-    "raise your": "raise your ya ya ya", 
+    "raise your": ["raise your ya ya ya"], 
     "fine": ["shyt"], 
     "Ws": ["ws in the shatt"], 
     "Mama": ["Mama a girl behind you"],
@@ -52,8 +52,8 @@ brainrot_list = {
     "negative": ["aura"],
     "Only in": ["Ohio"],
     "Wait": ["They don't love you like I love you"],    
-     "Haliey Welch": ["hawk tuah, spit on that thang"],
-     "The Costco Guys": ["We're so sorry to hear about your brother that passed away he gets five big booms... BOOM. BOOM. BOOM. BOOM. BOOOOOOOOM!!", "we bring the BOOM"]
+    "Haliey Welch": ["hawk tuah, spit on that thang"],
+    "The Costco Guys": ["We're so sorry to hear about your brother that passed away he gets five big booms... BOOM. BOOM. BOOM. BOOM. BOOOOOOOOM!!", "we bring the BOOM"]
 }
 
 # brainrot function
@@ -107,7 +107,18 @@ def backwards_text(text):
         result += text[i]
     return result
      
-     
+    
+# generate_brain_rot function
+# arguments: int word_counter
+# return: string with word_counter words of brainrot
+def generate_brain_rot(word_counter):
+    brainrot_dump = [item for sublist in brainrot_list.values() for item in sublist]
+    random.shuffle(brainrot_dump) # shuffle the list randomly
+    brainrot_words = (" ".join(brainrot_dump)).split(" ")
+    
+    word_counter = min(word_counter, len(brainrot_dump))
+    return " ".join(brainrot_words[:word_counter])
+
 
 # Main function to test the implemented functions
 # DELETE LATER
