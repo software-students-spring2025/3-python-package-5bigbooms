@@ -7,7 +7,7 @@ brainrot_list = {
     "94.48% Accurate": ["LET ME KNOWWW (LET ME KNOW). DO YOU LOVE THE WAY I DO WHEN I'M LOVING YOUR BODY. HEY, DO YOU LOVE THE WAY I DO WHEN I'M LOVING YOUR BODY"], 
     "Millenial Burger Restaurant": ["We are Young! Ho! There's a fire in our soul. We go big or go home together!"], 
     "Montoya": ["MONTOYA POR FAVOR"], 
-    "Great Meme Drought of 2025": ["[Kazoo] LET ME KNOWWW (LET ME KNOW). DO YOU LOVE THE WAY I DO WHEN I'M LOVING YOUR BODY. HEY, DO YOU LOVE THE WAY I DO WHEN I'M LOVING YOUR BODY"],
+    "Great Meme Drought of 2025": ["[Kazoo]: LET ME KNOWWW (LET ME KNOW). DO YOU LOVE THE WAY I DO WHEN I'M LOVING YOUR BODY. HEY, DO YOU LOVE THE WAY I DO WHEN I'M LOVING YOUR BODY"],
     "Severance": ["Mark is hot, Helly's hot, Irv is hot, Gemma's hot, Dylan's hot, Milkshake's hot... They're all really hot"],
     "FettyWap": ["I want you to be mine again, baby, ayy. I know my lifestyle is drivin' you crazy, ay"], 
     "G3 - TWEAKER ACOUSTIC": ["I might swerve bend that corner whoa whoa... bit hold on tight cause I'll tweak in this bit start letting sh** go"],
@@ -36,10 +36,21 @@ brainrot_list = {
     "Little John": ["Galvanzied Square steel and screws from his aunt"],
     "Hyperpigmentation": ["It is fanTAStic"], 
     "Joe Biden": ["SODA"], 
+    "Trump": ["ObamNa"],
     "Freak": ["Bob"], 
     "John": ["Pork"],
     "Joshua Block": ["Put the fries in the bag"], 
-    "The uninvited": ["oh my god bruh, oh hell nah man, who invited this kid,"]
+    "The uninvited": ["oh my god bruh, oh hell nah man, who invited this kid,"],
+    "skibidi": ["toilet rizz"], 
+    "what the": ["sigma"], 
+    "chat": ["we're cooked"], 
+    "raise your": "raise your ya ya ya", 
+    "fine": ["shyt"], 
+    "Ws": ["ws in the shatt"], 
+    "Mama": ["Mama a girl behind you"],
+    "10": "level 10 gyat", 
+    "negative": "aura",
+    
 }
 
 # brainrot function
