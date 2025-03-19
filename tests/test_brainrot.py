@@ -1,33 +1,74 @@
 import pytest
+import random
+import string
+from brainrot_package.brainrot_functions import (
+    brainrot,
+    get_brain_rot_of,
+    random_capitalization,
+    rotify, 
+    backwards_text,
+    brainrot_list  # import the list for reference in tests
+)
+
+# TESTS FOR BRAINROT(N)
+def test_brainrot_non_positive():
+    # if n<=0, brainrot returns empty dictionary 
+    assert brainrot(-1) == {}
+
+def test_brainrot_returns_correct_number():
+    # brainrot returns exactlt n entries if n within bounds
+    n = 3
+    result = brainrot(n)
+    expected_len = min(n, len(brainrot_list))
+    assert len(result) == expected_len
+    for key in result:
+        assert key in brainrot_list
+
+def test_brainrot_exceeds_list_length():
+    # if n is greater than list entries, return max available entries
+    n = len(brainrot_list) + 10
+    result = brainrot(n)
+    expected = len(brainrot_list)
+    assert len(result) == expected
 
 
-class Tests:
-    #
-    # Fixtures - these are functions that can do any optional setup or teardown before or after a test function is run.
-    #
+#TESTS FOR RANDOM_CAPITALIZATION(PHRASE)
+def test_random_capitalization_basic():
+    # tests if capitalization is properly converted
+    input_str = "hello"
+    expected = "hElLo"
+    assert random_capitalization(input_str) == expected
 
-    @pytest.fixture
-    def example_fixture(self):
-        """
-        An example of a pytest fixture - a function that can be used for setup and teardown before and after test functions are run.
-        """
+def test_random_capitalization_empty():
+    # empty string returns empty string
+    assert random_capitalization("") == ""
 
-        # place any setup you want to do before any test function that uses this fixture is run
+def test_random_capitalization_single_char():
+    # test behavior for single character, should remain the same
+    letter = random.choice(string.ascii_letters)
+    assert random_capitalization(letter) == letter
 
-        yield  # at th=e yield point, the test function will run and do its business
+#TESTS FOR BACKWARDS_TEXT(TEXT)
+def test_backwards_text_regular():
+    #reverse text in string
+    input_text = "Hello"
+    expected = "olleH"
+    assert backwards_text(input_text) == expected
 
-        # place with any teardown you want to do after any test function that uses this fixture has completed
+def test_backwards_text_empty():
+    # reverse empty text
+    input_text = ""
+    expected = ""
+    assert backwards_text(input_text) == expected
 
-    #
-    # Test functions
-    #
+def test_backwards_text_non_string():
+    # reverse number text
+    input_value = 12345
+    expected = "54321"
+    assert backwards_text(input_value) == expected
 
-    def test_sample(self, example_fixture):
-        """
-        Test debugging... making sure that we can run a simple test that always passes.
-        Note the use of the example_fixture in the parameter list - any setup and teardown in that fixture will be run before and after this test function executes
-        From the main project directory, run the `python3 -m pytest` command to run all tests.
-        """
-        expected = True  # the value we expect to be present
-        actual = True  # the value we see in reality
-        assert actual == expected, "Expected True to be equal to True!"
+def test_backwards_text_special_characters():
+    # text with non-alphabetical and numbers
+    input_text = "A!B@C#"
+    expected = "#C@B!A"
+    assert backwards_text(input_text) == expected

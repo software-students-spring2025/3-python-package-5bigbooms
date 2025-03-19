@@ -44,7 +44,7 @@ brainrot_list = {
     "skibidi": ["toilet rizz"], 
     "what the": ["sigma"], 
     "chat": ["we're cooked"], 
-    "raise your": "raise your ya ya ya", 
+    "raise your": ["raise your ya ya ya"], 
     "fine": ["shyt"], 
     "Ws": ["ws in the shatt"], 
     "Mama": ["Mama a girl behind you"],
@@ -52,21 +52,30 @@ brainrot_list = {
     "negative": ["aura"],
     "Only in": ["Ohio"],
     "Wait": ["They don't love you like I love you"],    
-     "Haliey Welch": ["hawk tuah, spit on that thang"],
-     "The Costco Guys": ["We're so sorry to hear about your brother that passed away he gets five big booms... BOOM. BOOM. BOOM. BOOM. BOOOOOOOOM!!", "we bring the BOOM"]
+    "Haliey Welch": ["hawk tuah, spit on that thang"],
+    "The Costco Guys": ["We're so sorry to hear about your brother that passed away he gets five big booms... BOOM. BOOM. BOOM. BOOM. BOOOOOOOOM!!", "we bring the BOOM"]
 }
 
 # brainrot function
 # arguments: integer number
 # return: n random brainrots from list
 def brainrot(n: int):
+    # check if n is an integer
+    if not isinstance(n, int):
+        raise TypeError("n must be an integer")
+    # check if n is positive
     if n <= 0:
         return {}
     
     selected_keys = random.sample(list(brainrot_list.keys()), min(n, len(brainrot_list)))
     return {key: brainrot_list[key] for key in selected_keys}
 
+# brainrot of specific person function
+# arguments: name
+# return: a brainrot attributed to input name
 def get_brain_rot_of(name):
+    if not isinstance(name, str):
+         name = str(name)
     if name in brainrot_list:
           return name + ": " + random.choice(brainrot_list[name])
     else:
@@ -84,8 +93,32 @@ def random_capitalization(phrase: str):
 # rotify function
 # arguments: string phrase
 # return: string with "ahh" concatenated
-def rotify(input_string):
+def rotify(input_string: str):
     return input_string + " ahh"
+
+# backwards text function
+# arguments: text
+# return: string in opposite direction
+def backwards_text(text):
+    result = ""
+    if not isinstance(text, str):
+        text = str(text)
+    for i in range(len(text) - 1, -1, -1):
+        result += text[i]
+    return result
+     
+    
+# generate_brain_rot function
+# arguments: int word_counter
+# return: string with word_counter words of brainrot
+def generate_brain_rot(word_counter):
+    brainrot_dump = [item for sublist in brainrot_list.values() for item in sublist]
+    random.shuffle(brainrot_dump) # shuffle the list randomly
+    brainrot_words = (" ".join(brainrot_dump)).split(" ")
+    
+    word_counter = min(word_counter, len(brainrot_dump))
+    return " ".join(brainrot_words[:word_counter])
+
 
 # Main function to test the implemented functions
 # DELETE LATER
