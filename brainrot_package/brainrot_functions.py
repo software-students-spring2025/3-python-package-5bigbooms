@@ -44,7 +44,7 @@ brainrot_list = {
     "skibidi": ["toilet rizz"], 
     "what the": ["sigma"], 
     "chat": ["we're cooked"], 
-    "raise your": "raise your ya ya ya", 
+    "raise your": ["raise your ya ya ya"], 
     "fine": ["shyt"], 
     "Ws": ["ws in the shatt"], 
     "Mama": ["Mama a girl behind you"],
@@ -52,21 +52,30 @@ brainrot_list = {
     "negative": ["aura"],
     "Only in": ["Ohio"],
     "Wait": ["They don't love you like I love you"],    
-     "Haliey Welch": ["hawk tuah, spit on that thang"],
-     "The Costco Guys": ["We're so sorry to hear about your brother that passed away he gets five big booms... BOOM. BOOM. BOOM. BOOM. BOOOOOOOOM!!", "we bring the BOOM"]
+    "Haliey Welch": ["hawk tuah, spit on that thang"],
+    "The Costco Guys": ["We're so sorry to hear about your brother that passed away he gets five big booms... BOOM. BOOM. BOOM. BOOM. BOOOOOOOOM!!", "we bring the BOOM"]
 }
 
 # brainrot function
 # arguments: integer number
 # return: n random brainrots from list
 def brainrot(n: int):
+    # check if n is an integer
+    if not isinstance(n, int):
+        raise TypeError("n must be an integer")
+    # check if n is positive
     if n <= 0:
         return {}
     
     selected_keys = random.sample(list(brainrot_list.keys()), min(n, len(brainrot_list)))
     return {key: brainrot_list[key] for key in selected_keys}
 
+# brainrot of specific person function
+# arguments: name
+# return: a brainrot attributed to input name
 def get_brain_rot_of(name):
+    if not isinstance(name, str):
+         name = str(name)
     if name in brainrot_list:
           return name + ": " + random.choice(brainrot_list[name])
     else:
@@ -80,6 +89,38 @@ def random_capitalization(phrase: str):
     for i in range(len(phrase)):
             result += phrase[i].upper() if i % 2 == 1 else phrase[i]
     return result 
-        
+
+# rotify function
+# arguments: string phrase
+# return: string with "ahh" concatenated
+def rotify(input_string):
+    return input_string + " ahh"
+
+# Main function to test the implemented functions
+# DELETE LATER
+def main():
+    print("Testing brainrot function (3 random entries):")
+    brainrot_output = brainrot(3)
+    for key, value in brainrot_output.items():
+        print(f"{key}: {value}")
+
+    print("\nTesting random_capitalization function:")
+    sample_phrase = "test test testing capitalization"
+    print(f"Original: {sample_phrase}")
+    print(f"Modified: {random_capitalization(sample_phrase)}")
+
+    print("\nTesting rotify function:")
+    sample_rot = "skibidi"
+    print(f"Original: {sample_rot}")
+    print(f"Modified: {rotify(sample_rot)}")
+    
+    print("\nTesting get_brain_rot_of function:")
+    test_names = ["FettyWap", "The uninvited", "Jaden", "Nonexistent Name"]
+    for name in test_names:
+        print(get_brain_rot_of(name))
+
+if __name__ == "__main__":
+    main()
+
 
 
