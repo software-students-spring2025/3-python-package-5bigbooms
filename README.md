@@ -1,3 +1,5 @@
-# Python Package Exercise
+![Build Workflow](https://github.com/software-students-spring2025/3-python-package-5bigbooms/actions/workflows/build.yaml/badge.svg)
 
-An exercise to create a Python package, build it, test it, distribute it, and use it. See [instructions](./instructions.md) for details.
+# Brain Rot Package
+
+...
