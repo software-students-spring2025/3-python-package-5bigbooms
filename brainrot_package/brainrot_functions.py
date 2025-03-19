@@ -106,7 +106,7 @@ def main():
     print(f"Modified: {rotify(sample_rot)}")
     
     print("\nTesting get_brain_rot_of function:")
-    test_names = ["FettyWap", "The uninvited", "Jaden", "Nonexistent Name"]
+    test_names = ["FettyWap", "The uninvited", "Jaden", "Nonexistent Name", "Comments"]
     for name in test_names:
         print(get_brain_rot_of(name))
 
