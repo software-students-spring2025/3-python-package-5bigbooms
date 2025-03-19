@@ -3,7 +3,7 @@ import random
 #predefined list 
 brainrot_list = {
      "Haliey Welch": ["hawk tuah, spit on that thang"],
-     "The Costco Guys": ["We're so sorry to hear about your brother that passed away he gets five big booms", ""]
+     "The Costco Guys": ["We're so sorry to hear about your brother that passed away he gets five big booms... BOOM. BOOM. BOOM. BOOM. BOOOOOOOOM!!", ""]
 }
 
 # Hall of fame function
