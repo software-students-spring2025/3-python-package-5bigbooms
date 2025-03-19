@@ -48,9 +48,9 @@ brainrot_list = {
     "fine": ["shyt"], 
     "Ws": ["ws in the shatt"], 
     "Mama": ["Mama a girl behind you"],
-    "10": "level 10 gyat", 
-    "negative": "aura",
-    
+    "10": ["level 10 gyat"], 
+    "negative": ["aura"],
+    "Only in": ["Ohio"],    
 }
 
 # brainrot function
