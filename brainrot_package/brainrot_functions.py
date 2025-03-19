@@ -1,9 +1,10 @@
 import random
 
 #predefined list 
-hall_of_fame_list = [
-    #Tony's list
-]
+brainrot_list = {
+     "Haliey Welch": ["hawk tuah, spit on that thang"],
+     "The Costco Guys": ["We're so sorry to hear about your brother that passed away he gets five big booms... BOOM. BOOM. BOOM. BOOM. BOOOOOOOOM!!", ""]
+}
 
 # Hall of fame function
 # arguments: integer number
@@ -12,7 +13,7 @@ def hall_of_fame(n: int):
     if n <= 0:
         return []
     # ensure no error messages
-    return random.sample(hall_of_fame_list, min(n, len(hall_of_fame_list)))
+    return random.sample(brainrot_list, min(n, len(brainrot_list)))
 
 
 # Random capitalization function
