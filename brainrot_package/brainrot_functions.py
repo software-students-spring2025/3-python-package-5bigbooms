@@ -1,9 +1,10 @@
 import random
 
 #predefined list 
-hall_of_fame_list = [
-    #Tony's list
-]
+brainrot_list = {
+     "Haliey Welch": ["hawk tuah, spit on that thang"],
+     "The Costco Guys": ["We're so sorry to hear about your brother that passed away he gets five big booms", ""]
+}
 
 # Hall of fame function
 # arguments: integer number
