@@ -1,12 +1,13 @@
 import pytest
 import random
 import string
-from brainrot.brainrot_functions import (
+from src.brainrot.brainrot_functions import (
     brainrot,
     get_brain_rot_of,
     random_capitalization,
     rotify, 
     backwards_text,
+    generate_brain_rot,
     brainrot_list  # import the list for reference in tests
 )
 
@@ -116,3 +117,25 @@ def test_rotify_empty():
     input = ""
     expected = " ahh"
     assert rotify(input) == expected
+
+def test_rotify_non_string():
+    input = 12345
+    expected = "12345 ahh"
+    assert rotify(input) == expected
+
+# TEST FOR GENERATE_BRAIN_ROT(N)
+def test_generate_brain_rot_regular(self):
+    # This test checks if the function can return the exact number of words requested
+    result = generate_brain_rot(5)
+    self.assertEqual(len(result.split()), 5)
+
+def test_generate_brain_rot_zero(self):
+    # This test checks the function's behavior when asked for zero words
+    result = generate_brain_rot(0)
+    self.assertEqual(result, '')
+
+def test_generate_brain_rot_excess(self):
+    # This test checks the function's handling of a request for more words than are available
+    total_words = sum(len(sublist) for sublist in brainrot_list.values())
+    result = generate_brain_rot(total_words + 10)  # request more words than available
+    self.assertEqual(len(result.split()), total_words)
