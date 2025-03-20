@@ -92,10 +92,10 @@ def random_capitalization(phrase: str):
 # rotify function
 # arguments: string phrase
 # return: string with "ahh" concatenated
-def rotify(input_string):
-    if not isinstance(input,str):
-        input_string = str(input)
-    return input_string + " ahh"
+def rotify(phrase):
+    if not isinstance(phrase,str):
+        phrase = str(phrase)
+    return phrase + " ahh"
 
 # backwards text function
 # arguments: text
@@ -113,6 +113,11 @@ def backwards_text(text):
 # arguments: int word_counter
 # return: string with word_counter words of brainrot
 def generate_brain_rot(word_counter):
+    if not isinstance(word_counter,int):
+        return "Input value is not an integer"
+    if word_counter == 0:
+         return "No brainrot to be returned"
+        
     brainrot_dump = [item for sublist in brainrot_list.values() for item in sublist]
     random.shuffle(brainrot_dump) # shuffle the list randomly
     brainrot_words = (" ".join(brainrot_dump)).split(" ")
