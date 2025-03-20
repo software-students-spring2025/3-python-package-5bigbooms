@@ -2,12 +2,12 @@ import random
 
 #predefined list 
 brainrot_list = {
-    "Haliey Welch": ["hawk tuah, spit on that thang"],
-    "Squid Games": ["I've played these games before!"],
-    "The Costco Guys": ["We're so sorry to hear about your brother that passed away he gets five big booms... BOOM. BOOM. BOOM. BOOM. BOOOOOOOOM!!",
+    "haliey welch": ["hawk tuah, spit on that thang"],
+    "squid games": ["I've played these games before!"],
+    "the costco guys": ["We're so sorry to hear about your brother that passed away he gets five big booms... BOOM. BOOM. BOOM. BOOM. BOOOOOOOOM!!",
                         "We bring the BOOM, that's what we do"],
-    "94.48% Accurate": ["LET ME KNOWWW (LET ME KNOW). DO YOU LOVE THE WAY I DO WHEN I'M LOVING YOUR BODY. HEY, DO YOU LOVE THE WAY I DO WHEN I'M LOVING YOUR BODY"], 
-    "Millenial Burger Restaurant": ["We are Young! Ho! There's a fire in our soul. We go big or go home together!"], 
+    "94.48% accurate": ["LET ME KNOWWW (LET ME KNOW). DO YOU LOVE THE WAY I DO WHEN I'M LOVING YOUR BODY. HEY, DO YOU LOVE THE WAY I DO WHEN I'M LOVING YOUR BODY"], 
+    "millenial burger restaurant": ["We are Young! Ho! There's a fire in our soul. We go big or go home together!"], 
     "Montoya": ["MONTOYA POR FAVOR"], 
     "Great Meme Drought of 2025": ["[Kazoo]: LET ME KNOWWW (LET ME KNOW). DO YOU LOVE THE WAY I DO WHEN I'M LOVING YOUR BODY. HEY, DO YOU LOVE THE WAY I DO WHEN I'M LOVING YOUR BODY"],
     "Severance": ["Mark is hot, Helly's hot, Irv is hot, Gemma's hot, Dylan's hot, Milkshake's hot... They're all really hot","mm- mm- mark?"],
