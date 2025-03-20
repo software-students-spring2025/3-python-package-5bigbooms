@@ -73,6 +73,7 @@ def brainrot(n: int):
 # arguments: name
 # return: a brainrot attributed to input name
 def get_brain_rot_of(name):
+    name = name.lower()
     if not isinstance(name, str):
          name = str(name)
     if name in brainrot_list:
@@ -93,12 +94,16 @@ def random_capitalization(phrase: str):
 # arguments: string phrase
 # return: string with "ahh" concatenated
 def rotify(input_string):
+    if not isinstance(input,str):
+        input_string = str(input)
     return input_string + " ahh"
 
 # Main function to test the implemented functions
 # DELETE LATER
 def main():
-    print("Testing brainrot function (3 random entries):")
+    print("testing get brainrot function: comments")
+    print(get_brain_rot_of("comments"))
+    
     brainrot_output = brainrot(3)
     for key, value in brainrot_output.items():
         print(f"{key}: {value}")
