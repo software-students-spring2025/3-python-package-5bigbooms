@@ -8,6 +8,7 @@ version = "0.1.0"
 description = "A fun package for generating random brainrot content and text transformations"
 readme = "README.md"
 requires-python = ">=3.8"
+license = "MIT"
 authors = [
     {name = "Vladimir Kartamyshev", email = "vnk3247@nyu.edu"},
     {name = "Tony Liu", email = "tl3608@nyu.edu"},
@@ -18,7 +19,6 @@ classifiers = [
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
-    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
 dependencies = [
