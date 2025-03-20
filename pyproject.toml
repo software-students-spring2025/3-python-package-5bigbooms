@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "brainrot-generator"
-version = "0.1.1"
+version = "0.1.2"
 description = "A fun package for generating random brainrot content and text transformations"
 readme = "README.md"
 requires-python = ">=3.8"
