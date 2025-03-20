@@ -1,7 +1,7 @@
 import pytest
 import random
 import string
-from brainrot_package.brainrot_functions import (
+from brainrot.brainrot_functions import (
     brainrot,
     get_brain_rot_of,
     random_capitalization,

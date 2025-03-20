@@ -120,31 +120,4 @@ def generate_brain_rot(word_counter):
     return " ".join(brainrot_words[:word_counter])
 
 
-# Main function to test the implemented functions
-# DELETE LATER
-def main():
-    print("Testing brainrot function (3 random entries):")
-    brainrot_output = brainrot(3)
-    for key, value in brainrot_output.items():
-        print(f"{key}: {value}")
-
-    print("\nTesting random_capitalization function:")
-    sample_phrase = "test test testing capitalization"
-    print(f"Original: {sample_phrase}")
-    print(f"Modified: {random_capitalization(sample_phrase)}")
-
-    print("\nTesting rotify function:")
-    sample_rot = "skibidi"
-    print(f"Original: {sample_rot}")
-    print(f"Modified: {rotify(sample_rot)}")
-    
-    print("\nTesting get_brain_rot_of function:")
-    test_names = ["FettyWap", "The uninvited", "Jaden", "Nonexistent Name"]
-    for name in test_names:
-        print(get_brain_rot_of(name))
-
-if __name__ == "__main__":
-    main()
-
-
 
