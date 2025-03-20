@@ -118,6 +118,3 @@ def generate_brain_rot(word_counter):
     
     word_counter = min(word_counter, len(brainrot_dump))
     return " ".join(brainrot_words[:word_counter])
-
-
-
