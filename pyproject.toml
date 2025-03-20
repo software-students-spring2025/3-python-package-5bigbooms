@@ -12,6 +12,7 @@ authors = [
     {name = "Vladimir Kartamyshev", email = "vnk3247@nyu.edu"},
     {name = "Tony Liu", email = "tl3608@nyu.edu"},
     {name = "Giulia Carvalho", email = "gbc9191@nyu.edu"},
+    {name = "Clarissa Choi", email = "csc9610@nyu.edu"},
 ]
 classifiers = [
     "Programming Language :: Python :: 3",
