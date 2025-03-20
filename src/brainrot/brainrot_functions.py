@@ -21,6 +21,7 @@ brainrot_list = {
         "They gonna show this on Fox News bro 😭 ",
         "Historians skipping our generation",
         "ahh"
+        "goofy ahh"
     ],
     "raywilliamjohnson": ["He had a pew pew and unalived someone"],
     "hozier": ["*yells"], 
