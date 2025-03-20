@@ -9,9 +9,9 @@ A Python package that generates brainrot—random snippets of internet culture, 
 ## Team Members
 
 - [Tony Liu](https://github.com/tony102809)
-- [Vladamir](https://github.com/lawaldemur)
+- [Vladimir Kartamyshev ](https://github.com/lawaldemur)
 - [Clarissa Choi](https://github.com/clammy424)
-- [Giulia](https://github.com/giulia-carvalho)
+- [Giulia Carvalho](https://github.com/giulia-carvalho)
 ## Installation
 
 You can install brainrot-generator directly from [PyPI](INSERT LINK HERE):
@@ -89,11 +89,6 @@ You can also use brainrot from the command line:
 # Install the package
 pip install brainrot-generator
 
-# Run the CLI
-brainrot
-```
-Or
-```bash
 python -m brainrot
 ```
 
