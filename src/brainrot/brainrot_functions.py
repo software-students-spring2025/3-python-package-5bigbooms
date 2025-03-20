@@ -98,6 +98,7 @@ def rotify(input_string):
         input_string = str(input)
     return input_string + " ahh"
 
+<<<<<<< HEAD:brainrot_package/brainrot_functions.py
 # Main function to test the implemented functions
 # DELETE LATER
 def main():
@@ -128,3 +129,27 @@ if __name__ == "__main__":
 
 
 
+=======
+# backwards text function
+# arguments: text
+# return: string in opposite direction
+def backwards_text(text):
+    result = ""
+    if not isinstance(text, str):
+        text = str(text)
+    for i in range(len(text) - 1, -1, -1):
+        result += text[i]
+    return result
+     
+    
+# generate_brain_rot function
+# arguments: int word_counter
+# return: string with word_counter words of brainrot
+def generate_brain_rot(word_counter):
+    brainrot_dump = [item for sublist in brainrot_list.values() for item in sublist]
+    random.shuffle(brainrot_dump) # shuffle the list randomly
+    brainrot_words = (" ".join(brainrot_dump)).split(" ")
+    
+    word_counter = min(word_counter, len(brainrot_dump))
+    return " ".join(brainrot_words[:word_counter])
+>>>>>>> 54f340834ba9bfc4b3e45ccbcdaded91f5de8cf7:src/brainrot/brainrot_functions.py
