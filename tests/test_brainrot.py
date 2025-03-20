@@ -72,3 +72,47 @@ def test_backwards_text_special_characters():
     input_text = "A!B@C#"
     expected = "#C@B!A"
     assert backwards_text(input_text) == expected
+
+# TESTS FOR GET_BRAINROT_OF(NAME)
+def test_get_brainrot_regular():
+    input = "the costco guys"
+    expected1 = input + ": We're so sorry to hear about your brother that passed away he gets five big booms... BOOM. BOOM. BOOM. BOOM. BOOOOOOOOM!!"
+    expected2 = input + ": We bring the BOOM, that's what we do"
+    assert get_brain_rot_of(input) == (expected1 or expected2)
+
+def test_get_brainrot_non_string():
+    # check non string input
+    input_value = [98,114,111]
+    name = str(input_value)
+    expected = name + ": The typa shi bro sends when ___"
+    assert get_brain_rot_of(input_value) == expected
+
+def test_get_brainrot_empty():
+    # check empty input
+    input = ""
+    expected = " is unfortunately not a brainrot contributor"
+    assert get_brain_rot_of(input) == expected
+
+def test_get_brainrot_rand_capitalisation():
+    # check capitalised input
+    input = "bRo"
+    expected =  input + ": The typa shi bro sends when ___"
+    assert get_brain_rot_of(input) == expected
+
+def test_get_brainrot_not_instance():
+    # check capitalised input
+    input = "bro "
+    expected = input + "The typa shi bro sends when ___"
+    assert get_brain_rot_of(input) == expected
+
+# TEST FOR ROTIFY(STRING)
+def test_rotify_regular():
+    #check regular input
+    input = "hello"
+    expected = "hello ahh"
+    assert rotify(input) == expected
+
+def test_rotify_empty():
+    input = ""
+    expected = " ahh"
+    assert rotify(input) == expected
