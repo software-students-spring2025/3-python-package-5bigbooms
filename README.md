@@ -1,8 +1,11 @@
 ![Build Workflow](https://github.com/software-students-spring2025/3-python-package-5bigbooms/actions/workflows/build.yaml/badge.svg)
 
-# Brain Rot Package [Link](https://pypi.org/project/brainrot-generator/)
+# Brain Rot Package 
 
-A Python package that generates brainrot—random snippets of internet culture, memes, and absurdity. Perfect for adding humor to your day, generating chaotic messages, and embracing the absurdity of Tiktok culture.
+A Python package that generates brainrot—random snippets of internet culture, memes, and absurdity. Perfect for adding humor to your day, generating chaotic messages, and embracing the absurdity of Tiktok culture. 
+
+[PyPI Package Link](https://pypi.org/project/brainrot-generator/)
+
 ## Team Members
 
 - [Tony Liu](https://github.com/tony102809)
