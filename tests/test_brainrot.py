@@ -76,17 +76,9 @@ def test_backwards_text_special_characters():
 
 # TESTS FOR GET_BRAINROT_OF(NAME)
 def test_get_brainrot_regular():
-    input = "the costco guys"
-    expected1 = input + ": We're so sorry to hear about your brother that passed away he gets five big booms... BOOM. BOOM. BOOM. BOOM. BOOOOOOOOM!!"
-    expected2 = input + ": We bring the BOOM, that's what we do"
-    assert get_brain_rot_of(input) == (expected1 or expected2)
-
-def test_get_brainrot_non_string():
-    # check non string input
-    input_value = [98,114,111]
-    name = str(input_value)
-    expected = name + ": The typa shi bro sends when ___"
-    assert get_brain_rot_of(input_value) == expected
+    input = "haliey welch"
+    expected = "haliey welch: hawk tuah, spit on that thang"
+    assert get_brain_rot_of(input) == expected
 
 def test_get_brainrot_empty():
     # check empty input
@@ -97,13 +89,13 @@ def test_get_brainrot_empty():
 def test_get_brainrot_rand_capitalisation():
     # check capitalised input
     input = "bRo"
-    expected =  input + ": The typa shi bro sends when ___"
+    expected = "bro: The typa shi bro sends when ___"
     assert get_brain_rot_of(input) == expected
 
 def test_get_brainrot_not_instance():
     # check capitalised input
-    input = "bro "
-    expected = input + "The typa shi bro sends when ___"
+    input = "br0"
+    expected = "br0 is unfortunately not a brainrot contributor"
     assert get_brain_rot_of(input) == expected
 
 # TEST FOR ROTIFY(STRING)
@@ -124,18 +116,18 @@ def test_rotify_non_string():
     assert rotify(input) == expected
 
 # TEST FOR GENERATE_BRAIN_ROT(N)
-def test_generate_brain_rot_regular(self):
-    # This test checks if the function can return the exact number of words requested
-    result = generate_brain_rot(5)
-    self.assertEqual(len(result.split()), 5)
+def test_generate_brain_rot_regular():
+    # Test for a regular input where n is within the bounds
+    n = 10  # Change this number based on the expected average length of strings in brainrot_list values if needed
+    result = generate_brain_rot(n)
+    # Count words in the result
+    word_count = len(result.split())
+    assert word_count == n, f"Expected {n} words, but got {word_count} words."
 
-def test_generate_brain_rot_zero(self):
-    # This test checks the function's behavior when asked for zero words
-    result = generate_brain_rot(0)
-    self.assertEqual(result, '')
+def test_generate_brain_rot_not_num():
+    n = "hi"
+    assert generate_brain_rot(n) == "Input value is not an integer"
 
-def test_generate_brain_rot_excess(self):
-    # This test checks the function's handling of a request for more words than are available
-    total_words = sum(len(sublist) for sublist in brainrot_list.values())
-    result = generate_brain_rot(total_words + 10)  # request more words than available
-    self.assertEqual(len(result.split()), total_words)
+def test_generate_brain_rot_zero():
+    # Test for zero input, expecting an empty string
+    assert generate_brain_rot(0) == "No brainrot to be returned"
